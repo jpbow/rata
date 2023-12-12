@@ -11,5 +11,5 @@ export default meta
 type Story = StoryObj<typeof Button>
 
 export const Default: Story = {
-    render: () => <div className="bg-black">Click me!!</div>,
+    render: () => <Button>Click me</Button>,
 }

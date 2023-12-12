@@ -24,7 +24,6 @@
         "README.md",
         "LICENSE.md",
         "dist/",
-        "assets/",
         "!dist/tsconfig.tsbuildinfo"
     ],
     "dependencies": {

@@ -1,4 +1,4 @@
-import '@rata/core/assets/tailwind.css'
+import './tailwind.css'
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {

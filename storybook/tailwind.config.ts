@@ -3,5 +3,5 @@ import { tailwindConfig } from '@rata/core'
 
 export default {
     presets: [tailwindConfig],
-    content: ['./stories/**/*.{ts,tsx}'],
+    content: [...(tailwindConfig.content as string[]), './stories/**/*.{ts,tsx}'],
 } satisfies Config
