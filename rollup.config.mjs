@@ -5,7 +5,7 @@ import stripBanner from 'rollup-plugin-strip-banner'
 import cleanup from 'rollup-plugin-cleanup'
 import size from 'rollup-plugin-size'
 import { visualizer } from 'rollup-plugin-visualizer'
-import terser from "@rollup/plugin-terser"
+import terser from '@rollup/plugin-terser'
 
 const pkg = process.env.PACKAGE
 const isWatching = process.env.ROLLUP_WATCH === 'true'
@@ -18,10 +18,7 @@ const babelConfig = {
     comments: false,
 }
 
-const externals = [
-    'prop-types',
-    'joi',
-]
+const externals = ['prop-types', 'joi']
 
 let input = `./packages/${pkg}/src/index.js`
 
@@ -32,12 +29,17 @@ if (fs.existsSync(`./packages/${pkg}/src/index.ts`)) {
 
 const common = {
     input,
-    external: id => externals.includes(id)
-        || id.indexOf('react') === 0
-        || id.indexOf('d3') === 0
-        || id.indexOf('@rata') === 0
-        || id.indexOf('lodash') === 0
-        || id.indexOf('@react-spring') === 0,
+    external: id =>
+        externals.includes(id) ||
+        id.indexOf('react') === 0 ||
+        id.indexOf('tailwindcss') === 0 ||
+        id.indexOf('tailwindcss-animate') === 0 ||
+        id.indexOf('next-themes') === 0 ||
+        id.indexOf('@rata') === 0,
+    onwarn(warning, warn) {
+        if (warning.code === 'THIS_IS_UNDEFINED') return
+        warn(warning)
+    },
 }
 
 const commonPlugins = [
@@ -54,7 +56,7 @@ const commonPlugins = [
     }),
     babel(babelConfig),
     !isWatching && terser(),
-    cleanup()
+    cleanup(),
 ]
 
 const configs = [
@@ -68,15 +70,17 @@ const configs = [
         },
         plugins: [
             ...commonPlugins,
-            !isWatching && size({
-                filename: `stats/${pkg}-size.es.json`,
-            }),
-            !isWatching && visualizer({
-                filename: `stats/${pkg}-stats.es.json`,
-                json: true,
-            })
+            !isWatching &&
+                size({
+                    filename: `stats/${pkg}-size.es.json`,
+                }),
+            !isWatching &&
+                visualizer({
+                    filename: `stats/${pkg}-stats.es.json`,
+                    json: true,
+                }),
         ].filter(Boolean),
-    }
+    },
 ]
 
 if (!isWatching) {

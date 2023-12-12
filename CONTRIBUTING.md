@@ -1,22 +1,22 @@
 # Contributing
 
-- [requirements](#requirements)
-- [setup](#setup)
-- [development](#development)
-  - [storybook](#storybook)
-  - [demo/doc website](#demodoc-website)
-  - [testing](#testing)
-  - [formatting](#formatting)
-  - [linting](#linting)
-  - [screenshots](#screenshots)
-- [website](#website)
-- [deploy](#deploy)
+-   [requirements](#requirements)
+-   [setup](#setup)
+-   [development](#development)
+    -   [storybook](#storybook)
+    -   [demo/doc website](#demodoc-website)
+    -   [testing](#testing)
+    -   [formatting](#formatting)
+    -   [linting](#linting)
+    -   [screenshots](#screenshots)
+-   [website](#website)
+-   [deploy](#deploy)
 
 ## Requirements
 
-- **Node.js >= 16**
-- **pnpm**
-- **Make** (you also have the option to run the commands manually though)
+-   **Node.js >= 16**
+-   **pnpm**
+-   **Make** (you also have the option to run the commands manually though)
 
 ## Setup
 
@@ -49,27 +49,6 @@ make pkg-dev-button
 ```
 
 Where `button` is the name of the package.
-
-### Demo/Doc website
-
-You can also use the demo website while working on components, it might be
-useful to see how it behaves with various controls, and might be required to
-update the documentation if you change the public API of components.
-
-The packages are automatically linked to the website, so it doesn't use
-the version from npm, however if you make some change to the source
-of a package, you'll have to rebuild it to see the changes.
-
-To automate this process, you can start a watcher on the package you're working
-on, for example if you want to make some change on the `@rata/button` package,
-you should run `make pkg-dev-button` and then start the website `make website`,
-this way each change you make will trigger a build and will be (almost :))
-immediately visible on the website.
-
-You can also build the packages without running a watcher, you have two options:
-
- 1. Rebuild all the packages via `make pkgs-build` or…
- 2. Rebuild only a specific package, for example `make pkg-build-button` for `@rata/button` package
 
 ### Testing
 
@@ -117,37 +96,11 @@ make pkg-lint-button
 
 where `button` is the name of the targeted rata package.
 
-### Screenshots
-
-Each package comes with its own README, we use screenshots from the website
-in order to illustrate available package components.
-
-The script takes screenshots from the website using config defined in
-`conf/base.yaml`, if you added a new package, please update this config accordingly.
-
-To refresh the screenshots, please make sure the website is running on port `3000`,
-otherwise run:
-
-```
-make website
-```
-
-Then run the corresponding script:
-
-```
-make pkgs-screenshots
-```
-
-## Website
-
-The website is a CRA based application.
-
 ## Deploy
 
-The website is hosted on GitHub pages.
-In order to deploy the website (plus storybook), you need to have access
-to the rata github repository.
-There's a convenient command to deploy both the website & storybook:
+Storybook is hosted on GitHub pages.
+In order to deploy Sorybook, you need to have access to the rata github repository.
+There's a convenient command to deploy Storybook:
 
 ```
 make deploy-all
