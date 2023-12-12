@@ -225,9 +225,6 @@ importers:
       '@storybook/addon-links':
         specifier: ^7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/addon-styling-webpack':
-        specifier: ^0.0.5
-        version: 0.0.5(webpack@5.89.0)
       '@storybook/blocks':
         specifier: ^7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
@@ -3515,15 +3512,6 @@ packages:
       ts-dedent: 2.2.0
     dev: true
 
-  /@storybook/addon-styling-webpack@0.0.5(webpack@5.89.0):
-    resolution: {integrity: sha512-8XdE3w+W7qxMeqnK/FDFipFN9XaVKUJFcHyM2ZBlhAAxVWMbTcifqw5lzqeK8jSAA/TUtpUp37gT2Bw/3k6slQ==}
-    peerDependencies:
-      webpack: ^5.0.0
-    dependencies:
-      '@storybook/node-logger': 7.6.4
-      webpack: 5.89.0(esbuild@0.17.19)
-    dev: true
-
   /@storybook/addon-toolbars@7.0.7(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-/NkYHhU1VAz5lXjWuV8+ADWB84HzktvZv4jfiKX7Zzu6JVzrBu7FotQSWh3pDqqVwCB50RClUGtcHmSSac9CAQ==}
     peerDependencies:
@@ -4083,10 +4071,6 @@ packages:
       chalk: 4.1.2
       npmlog: 5.0.1
       pretty-hrtime: 1.0.3
-    dev: true
-
-  /@storybook/node-logger@7.6.4:
-    resolution: {integrity: sha512-GDkEnnDj4Op+PExs8ZY/P6ox3wg453CdEIaR8PR9TxF/H/T2fBL6puzma3hN2CMam6yzfAL8U+VeIIDLQ5BZdQ==}
     dev: true
 
   /@storybook/postinstall@7.0.7:
