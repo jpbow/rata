@@ -5,6 +5,7 @@ const config = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
+        '@storybook/addon-styling-webpack'
     ],
     framework: {
         name: '@storybook/react-webpack5',
