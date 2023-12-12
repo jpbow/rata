@@ -1,10 +1,10 @@
-import { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import animate from 'tailwindcss-animate'
 
 export const tailwindConfig: Config = {
     darkMode: ['class'],
-    content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
+    content: ['./node_modules/@rata/**/*.{ts,tsx}', 'src/**/*.{ts,tsx}'],
     theme: {
         container: {
             center: true,

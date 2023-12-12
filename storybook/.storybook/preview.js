@@ -1,4 +1,3 @@
-import './global.css'
 import '@rata/core/assets/tailwind.css'
 
 /** @type { import('@storybook/react').Preview } */
