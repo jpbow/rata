@@ -18,7 +18,7 @@ const babelConfig = {
     comments: false,
 }
 
-const externals = ['prop-types', 'joi']
+const externals = ['prop-types', 'zod']
 
 let input = `./packages/${pkg}/src/index.js`
 

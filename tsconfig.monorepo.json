@@ -2,10 +2,7 @@
     "files": [],
     "references": [
         // Core first because everything needs it
-        // { "path": "./packages/core" },
-
-        // Utility packages
-        // { "path": "./packages/example" },
+        { "path": "./packages/core" },
 
         // Components now
         { "path": "./packages/button" }
