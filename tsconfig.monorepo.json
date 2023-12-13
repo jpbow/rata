@@ -1,0 +1,10 @@
+{
+    "files": [],
+    "references": [
+        // Core first because everything needs it
+        { "path": "./packages/core" },
+
+        // Components now
+        { "path": "./packages/button" }
+    ]
+}

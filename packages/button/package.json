@@ -1,0 +1,39 @@
+{
+    "name": "@rata/button",
+    "version": "0.1.0",
+    "license": "MIT",
+    "author": {
+        "name": "Jamie Bowley",
+        "url": "https://github.com/jpbow"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jpbow/rata.git",
+        "directory": "packages/button"
+    },
+    "keywords": [
+        "rata",
+        "react",
+        "components",
+        "button"
+    ],
+    "main": "./dist/rata-button.cjs.js",
+    "module": "./dist/rata-button.es.js",
+    "types": "./dist/types/index.d.ts",
+    "files": [
+        "README.md",
+        "LICENSE.md",
+        "dist/",
+        "!dist/tsconfig.tsbuildinfo"
+    ],
+    "dependencies": {
+        "@radix-ui/react-slot": "1.0.2",
+        "@rata/core": "workspace:*"
+    },
+    "peerDependencies": {
+        "react": ">= 16.14.0 < 19.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

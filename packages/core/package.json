@@ -1,0 +1,45 @@
+{
+    "name": "@rata/core",
+    "version": "0.1.0",
+    "license": "MIT",
+    "author": {
+        "name": "Jamie Bowley",
+        "url": "https://github.com/jpbow"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jpbow/rata.git",
+        "directory": "packages/core"
+    },
+    "keywords": [
+        "rata",
+        "react",
+        "components",
+        "core"
+    ],
+    "main": "./dist/rata-core.cjs.js",
+    "module": "./dist/rata-core.es.js",
+    "types": "./dist/types/index.d.ts",
+    "files": [
+        "README.md",
+        "LICENSE.md",
+        "dist/",
+        "!dist/tsconfig.tsbuildinfo"
+    ],
+    "dependencies": {
+        "class-variance-authority": "0.7.0",
+        "clsx": "2.0.0",
+        "tailwind-merge": "2.1.0",
+        "tailwindcss-animate": "1.0.7"
+    },
+    "peerDependencies": {
+        "react": ">= 18",
+        "react-dom": ">= 18"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "tailwindcss": "3.3.6"
+    }
+}

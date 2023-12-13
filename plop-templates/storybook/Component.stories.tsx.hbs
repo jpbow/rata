@@ -1,0 +1,17 @@
+import type { Meta, StoryObj } from '@storybook/react'
+import { {{properCase name}} } from '@rata/{{dashCase name}}'
+
+const meta: Meta<typeof {{properCase name}}> = {
+    title: '{{properCase name}}',
+    component: {{properCase name}},
+    tags: ['autodocs'],
+}
+
+export default meta
+type Story = StoryObj<typeof {{properCase name}}>
+
+export const Default: Story = {
+    render: () => (
+        <{{properCase name}} />
+    ),
+}
