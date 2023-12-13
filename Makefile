@@ -100,6 +100,10 @@ endef
 #
 ########################################################################################################################
 
+pkg-new-%: ##@1 packages create new package
+	@echo "${YELLOW}Running Plop ${WHITE}@rata/${*}${RESET}"
+	@pnpm plop package "${*}"
+
 pkg-lint-%: ##@1 packages run eslint on package
 	@echo "${YELLOW}Running eslint on package ${WHITE}@rata/${*}${RESET}"
 	@pnpm eslint ./packages/${*}/{src,tests}/**/*.{js,ts,tsx}
