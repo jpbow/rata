@@ -54,7 +54,6 @@ init: ##@0 global cleanup/install/bootstrap
 fmt: ##@0 global format code using prettier (js, css, md)
 	@pnpm prettier --color --write \
 		"packages/*/{src,tests}/**/*.{js,ts,tsx}" \
-		"packages/*/index.d.ts" \
 		"packages/*/README.md" \
 		"storybook/.storybook/*.{js,ts,tsx}" \
 		"storybook/stories/**/*.{js,ts,tsx}" \
@@ -64,7 +63,6 @@ fmt-check: ##@0 global check if files were all formatted using prettier
 	@echo "${YELLOW}Checking formatting${RESET}"
 	@pnpm prettier --color --list-different \
         "packages/*/{src,tests}/**/*.{js,ts,tsx}" \
-        "packages/*/index.d.ts" \
         "packages/*/README.md" \
 		"storybook/.storybook/*.{js,ts,tsx}" \
 		"storybook/stories/**/*.{js,ts,tsx}" \
