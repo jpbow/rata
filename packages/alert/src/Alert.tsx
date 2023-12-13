@@ -35,6 +35,7 @@ const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
+  // eslint-disable-next-line jsx-a11y/heading-has-content
   <h5
     ref={ref}
     className={cn("mb-1 font-medium leading-none tracking-tight", className)}
@@ -62,7 +63,7 @@ const Alert = React.forwardRef<
       icon?: React.ReactNode;
       title?: React.ReactNode;
     }
->(({ className, variant, icon, title, children, ...props }, ref) => (
+>(({ variant, icon, title, children, ...props }, ref) => (
   <AlertWrapper ref={ref} variant={variant} {...props}>
     {icon}
     <AlertTitle>{title}</AlertTitle>
