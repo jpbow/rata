@@ -18,7 +18,7 @@ yarn add @rata/core @rata/button
 
 ## Features
 
--   TBC
+- TBC
 
 ## Packages & components
 

@@ -1,15 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '@rata/button'
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { Button } from "@rata/button";
 
 const meta: Meta<typeof Button> = {
-    title: 'Button',
-    component: Button,
-    tags: ['autodocs'],
-}
+  title: "Button",
+  component: Button,
+  tags: ["autodocs"],
+};
 
-export default meta
-type Story = StoryObj<typeof Button>
+export default meta;
+type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-    render: () => <Button>Click me</Button>,
-}
+  render: () => <Button>Click me</Button>,
+};

@@ -1,9 +1,10 @@
-import { mount } from 'enzyme'
-import { create, act, ReactTestRenderer } from 'react-test-renderer'
-import { Alert } from '../'
+import { mount } from "enzyme";
+import { act, create, ReactTestRenderer } from "react-test-renderer";
 
-it.skip('should ', () => {
-    const instance = create(<Alert></Alert>).root
+import { Alert } from "../";
 
-    expect(instance).toBeDefined()
-})
+it.skip("should ", () => {
+  const instance = create(<Alert></Alert>).root;
+
+  expect(instance).toBeDefined();
+});

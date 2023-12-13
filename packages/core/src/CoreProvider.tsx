@@ -1,5 +1,5 @@
-import { CoreProviderProps } from './types'
+import { CoreProviderProps } from "./types";
 
 export const CoreProvider = ({ children }: CoreProviderProps) => {
-    return children
-}
+  return children;
+};
