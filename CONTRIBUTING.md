@@ -14,7 +14,7 @@
 
 ## Requirements
 
--   **Node.js >= 16**
+-   **Node.js >= 18**
 -   **pnpm**
 -   **Make** (you also have the option to run the commands manually though)
 
@@ -49,6 +49,15 @@ make pkg-dev-button
 ```
 
 Where `button` is the name of the package.
+
+### New Package
+
+Quickly scaffold a new component by running:
+
+```
+# Substitute your component name for mycomponent
+make pkg-new-mycomponent
+```
 
 ### Testing
 
