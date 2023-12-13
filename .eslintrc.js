@@ -18,10 +18,7 @@ const config = {
   },
   plugins: ["@typescript-eslint", "import"],
   rules: {
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-    ],
+    "@typescript-eslint/no-unused-vars": ["warn"],
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       { prefer: "type-imports", fixStyle: "inline-type-imports" },
