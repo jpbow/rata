@@ -4,7 +4,12 @@ import animate from 'tailwindcss-animate'
 
 export const tailwindConfig: Config = {
     darkMode: ['class'],
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './node_modules/@rata/button/**/*.js'],
+    content: [
+        './src/**/*.{js,jsx,ts,tsx}',
+        './node_modules/@rata/alert/**/*.js',
+        './node_modules/@rata/button/**/*.js',
+        // COMPONENT STYLE INCLUDES
+    ],
     theme: {
         container: {
             center: true,

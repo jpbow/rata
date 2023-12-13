@@ -103,6 +103,7 @@ endef
 pkg-new-%: ##@1 packages create new package
 	@echo "${YELLOW}Running Plop ${WHITE}@rata/${*}${RESET}"
 	@pnpm plop package "${*}"
+	@pnpm install
 
 pkg-lint-%: ##@1 packages run eslint on package
 	@echo "${YELLOW}Running eslint on package ${WHITE}@rata/${*}${RESET}"

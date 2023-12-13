@@ -34,7 +34,6 @@ const common = {
         id.indexOf('react') === 0 ||
         id.indexOf('tailwindcss') === 0 ||
         id.indexOf('tailwindcss-animate') === 0 ||
-        id.indexOf('next-themes') === 0 ||
         id.indexOf('@rata') === 0,
     onwarn(warning, warn) {
         if (warning.code === 'THIS_IS_UNDEFINED') return

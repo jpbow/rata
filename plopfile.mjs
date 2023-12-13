@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function (
     /** @type {import('plop').NodePlopAPI} */
     plop
@@ -51,6 +52,17 @@ export default function (
                 type: 'add',
                 path: 'packages/{{dashCase name}}/tsconfig.json',
                 templateFile: 'plop-templates/component/tsconfig.json.hbs',
+            },
+            {
+                path: 'packages/core/src/tailwind.ts',
+                pattern: /(\/\/ COMPONENT STYLE INCLUDES)/g,
+                template: "'./node_modules/@rata/{{dashCase name}}/**/*.js'\n$1",
+                type: 'modify',
+            },
+            {
+                type: 'add',
+                path: 'storybook/stories/{{dashCase name}}/{{properCase name}}.stories.tsx',
+                templateFile: 'plop-templates/storybook/Component.stories.tsx.hbs',
             },
         ],
     })
