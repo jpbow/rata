@@ -10,7 +10,7 @@ built ontop of RadixUI and TailwindCSS.
 ## Installation
 
 In order to use rata, you have to install the `@rata/core` package and then choose
-some of the scoped `@rata` packages according to the charts you wish to use:
+some of the scoped `@rata` packages according to the components you wish to use:
 
 ```
 yarn add @rata/core @rata/button
