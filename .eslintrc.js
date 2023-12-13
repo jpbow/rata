@@ -13,6 +13,9 @@ const config = {
     browser: true,
   },
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: ["tsconfig.json", "packages/*/tsconfig.json"],
+  },
   plugins: ["@typescript-eslint", "import"],
   rules: {
     "@typescript-eslint/no-unused-vars": [

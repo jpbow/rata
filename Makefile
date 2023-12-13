@@ -105,7 +105,7 @@ pkg-new-%: ##@1 packages create new package
 
 pkg-lint-%: ##@1 packages run eslint on package
 	@echo "${YELLOW}Running eslint on package ${WHITE}@rata/${*}${RESET}"
-	@pnpm eslint ./packages/${*}/{src,tests}/**/*.{js,ts,tsx}
+	@pnpm eslint "./packages/${*}/{src,tests}/**/*.{js,ts,tsx}"
 
 pkgs-lint: ##@1 packages run eslint on all packages
 	@echo "${YELLOW}Running eslint on all packages${RESET}"

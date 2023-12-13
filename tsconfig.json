@@ -5,8 +5,8 @@
     "jsx": "react-jsx",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "target": "ES2020",
-    "module": "ES2020",
-    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": false,
@@ -18,6 +18,5 @@
     "allowJs": true,
     "composite": true,
     "declarationMap": true
-  },
-  "include": ["./packages/*/index.d.ts"]
+  }
 }

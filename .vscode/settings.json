@@ -4,7 +4,7 @@
   "editor.formatOnSave": true,
   "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
   "eslint.workingDirectories": [
-    { "pattern": "apps/*/" },
+    { "pattern": "packages/*/" },
     { "pattern": "storybook/*/" }
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true,
